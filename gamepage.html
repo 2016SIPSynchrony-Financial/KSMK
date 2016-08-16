@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript">
+
+var games_mappings = [
+	{type: "phys", image:"hide.jpg", name: "Hide and seek", rules:"The game Hide and Seek is where the players all hide in different locations and a person who was designated to be the seeker before hand or if they were the first player to be found they automatically become the seeker for the next round. "},
+	{type: "phys", image:"tag.jpg", name: "Tag", rules:"Tag someone. The 'it' player tries to touch another player in order to make them 'it.' Keep going. Once a person has been tagged, continue the game with the new 'it' player trying to tag someone else.Stop the game when everyone is done being “it”.. When the game stops, the person who is 'it' loses."},
+	{type: "phys", image:"charades.jpg", name: "Charades", rules:"Choose a player to start the game. S/He will use their hands to describe the object or task they are thinking of without using words. The other players will try to guess what the player is trying to intemplate. And whoever guesses right will be the next one to describe their task/object."},
+	{type: "phys", image:"lava.jpg", name: "The Floor is Lava", rules:"Hot lava is a game in which the players imagine that the floor or ground is made of lava and so they avoid touching the ground. The players have to get to a certain spot avoiding contact with the floor."},
+	{type: "phys", image:"capture.jpg", name: "Capture the Flag", rules:"Both teams get five minutes to hide their flags. Once the flags are hidden, the game begins. Obviously, in order to win the game, you must capture the other team's flag and bring it back to your own territory. But if an enemy team member grabs you while you're standing on their part of the field, they are allowed to take you straight to jail (which is a small patch of land in their territory). You can be freed from jail if one of your team members tags you, and there's no limit to how many times you can be put back in jail. Though the game works best outdoors there's no reason why you couldn't play inside."},
+	{type: "phys", image:"hot.jpg", name: "Hot & Cold", rules:"A player hides an object that was previously chosen.The other player tries to find the object only be having the player that hid the object say “hot” or “cold”. Hot meaning they are closer to where the object is hidden and “cold” meaning the they are farther away from where the object is."},
+	{type: "phys", image:"duck.jpg", name: "Duck Duck Goose", rules:"All the players, except the first person who is “it”, sit in a circle. “It” walks around the circle, tapping each player on the head, saying 'duck' each time until 'it' decides to tap someone and say 'goose.' That person becomes the goose and runs after “It”, trying to tag him before “it” can take his seat. If “it” successfully reaches the goose's seat without being tagged, the goose is the new “it”. If the goose tags “it”, then the goose keeps his spot in the circle and “it” must either continue to be “it” for another turn or sit in the middle of the circle until another person is tagged."},
+	{type: "phys", image:"clap.jpg", name: "Clapping Game", rules:"One player claps to the tune of the song and other players try to guess the song, the first to guess correctly wins and can then clap to their own song."},
+	{type: "phys", image:"musical.jpg", name: "Musical Chairs", rules:"Arrange a circle of chairs numbering one less than the number of players participating in the game. Players line up outside the ring of chairs while one non-player is in charge of playing music — recorded music is easier. When the music begins, the players move, shake, and shimmy in a circle around the chairs, but as soon as the music stops, the players must immediately find a chair. One player will not find a seat and is thus eliminated, and one chair is removed from the circle for the next round. The game continues until one player remains."},
+	{type: "phys", image:"hopscotch.jpg", name: "Hop-Scotch", rules:"A hopscotch course typically looks like a series of numbered squares. The first player tosses a marker (rock, coin) into the first square; it must land within the confines of the square without bouncing out or touching a line. The player then hops through the course, making sure to skip the square with the marker in it. Players hop in single squares with one foot (either foot is fine), and use two feet for the side by side squares, one in each square. Upon completion of the hop sequence, the player continues their turn, tossing the marker into square number two and repeating the pattern."},
+	{type: "phys", image:"ring.jpg", name: "Ring Around the Rosy", rules:"The group links hands and recites the following verse while skipping, hopping, walking, or just being goofy in one circular direction: Ring around the rosy/A pocketful of posies/Ashes, ashes/We all fall down! At the end of the last line of the song, do just that."},
+	{type: "phys", image:"dodgeball.jpg", name: "Dodgeball", rules:"You divide up in two teams.  Drag a garden hose or other similar divider between the yard.  The teams each go to their own side, and may not cross the divider.  Gather as many balls as possible and split them up between the two teams to start.  You throw a ball at the other team, if you hit them below the head, they are out.  If they catch the ball, you are out.  The last person in is the winner."},
+	{type: "nonphys", image:"rhyme.jpg", name: "Rhymes", rules:"One player picks a word and the second player had to come up with 10 words that rhyme with the word that was given to them. If the player gets all 10 words than it’s the second player's turn if they fail to get all ten words than they have to try again using a different word."},
+	{type: "nonphys", image:"pictionary.jpg", name: "Pictionary", rules:"Decide on a theme, have everyone put names of things fitting that theme onto slips of paper and put it into a container. Create teams. When it's a team's turn, one person from that team will go up and randomly choose a slip of paper and draw the item while their team guesses at what it is and only members of their team can shout answers. Get through as many drawings as possible within a minute, each correct guess is worth one point. At the end of three rounds, the team with the most point wins."},
+	{type: "nonphys", image:"ispy.jpg", name: "I Spy", rules:"The game starts with a simple declaration by one player: ''I spy something _____.'' The blank is filled in with any adjective (i.e., purple, fuzzy, tall, square). It is up to the opposite player(s) to guess what it is the first player sees."},
+	{type: "nonphys", image:"monopoly.jpg", name: "Monopoly", rules:"See rules packet in game"},
+	{type: "nonphys", image:"uno.jpg", name: "Uno", rules:"See rules packet in game"},
+	{type: "nonphys", image:"goldfish.jpg", name: "Go fish", rules:"The standard 52-card pack is used. Some cards will be dealt and the rest will form the stock pile. The goal is to win the most 'books' of cards. A book is any four of a kind, such as four kings, four aces, and so on. The cards rank from ace (high) to two (low). The suits are not important, only the card numbers are relevant. Any player deals one card face up to each player. The player with the lowest card is the dealer. The dealer shuffles the cards, and the player on his right cuts them. The dealer completes the cut and deals the cards clockwise one at a time, face down, beginning with the player to his left. If two or three people are playing, each player receives seven cards. If four or five people are playing, each receives five cards. The remainder of the pack is placed face down on the table to form the stock. The player to the left of the dealer looks directly at any opponent and says, for example, 'Give me your kings,' usually addressing the opponent by name and specifying the rank he wants, from ace down to two. The player who is 'fishing' must have at least one card of the rank he asked for in his hand. The player who is addressed must hand over all the cards requested. If he has none, he says, 'Go fish!' and the player who made the request draws the top card of the stock and places it in his hand. If a player gets one or more cards of the named rank he asked for, he is entitled to ask the same or another player for a card. He can ask for the same card or a different one. So long as he succeeds in getting cards (makes a catch), his turn continues. When a player makes a catch, he must reveal the card so that the catch is verified. If a player gets the fourth card of a book, he shows all four cards, places them on the table face up in front of him, and plays again. If the player goes fishing without 'making a catch' (does not receive a card he asked for), the turn passes to his left. The game ends when all thirteen books have been won. The winner is the player with the most books. During the game, if a player is left without cards, he may (when it's his turn to play), draw from the stock and then ask for cards of that rank. If there are no cards left in the stock, he is out of the game."},
+	{type: "nonphys", image:"checkers.jpg", name: "Checkers", rules:"The pieces move diagonally, only onto dark squares and only forward. A player can move one piece per turn, and that piece can make a single move, unless it makes a capturing move. Multiple capturing moves are allowed on a single turn. Captured pieces are removed from the board. If a player can make a capture, that player must do so. If multiple capture moves can be made, the player may choose between them. If a piece reaches the furthest row from the player it belongs to, it becomes a king. A king has a captured piece placed on top of it, doubling its height. Kings may move diagonally both forward and backward. When one player can no longer make a move, the other player wins the game."},
+	{type: "nonphys", image:"tictac.jpg", name: "Tic-Tac-Toe", rules:"The object of Tic Tac Toe is to get three in a row. You play on a three by three game board. The first player is known as X and the second is O. Players alternate placing Xs and Os on the game board until either oppent has three in a row or all nine squares are filled."},
+	{type: "nonphys", image:"chess.jpg", name: "Chess", rules:"When a chess player makes a move that threatens the opposing king with capture, the king is said to be in check. If a player's king is in check then the player must make a move that eliminates the threat of capture, which does not necessarily mean the king must be moved. The possible moves to remove the threat of capture are: Move the king to a square where it is not threatened. Capture the threatening piece. Place a piece between the king and the opponent's threatening piece. A player may never leave his king in check at the end of his move. In informal chess games, it is customary to announce check when making a move that puts the opponent's king in check. However, in formal competitions this is not only unnecessary but may be considered annoying or distracting. If a chess player's king is placed in check and there is no legal move that player can make to escape check, then the king is said to be checkmated, the chess game ends, and that player loses."},
+	{type: "nonphys", image:"memory.jpg", name: "Matching Cards", rules:"Mix up the cars. Lay them all face down on a surface. Turn over any two cards. If the two cards match, keep them. If they don’t match, turn them back over. Remember what’s on each card and where it was. Watch and remember during the other player’s turn. The game is over when all the cards have been matched. The player with the most matches wins"},
+	{type: "nonphys", image:"bingo.jpg", name: "Bingo", rules:"Your goal is to cover five squares in a vertical, horizontal, or diagonal row. Cards in the US are 5 rows by 5 rows with a letter from the word BINGO written above each vertical row. The numbers on each square are generated at random. There are 75 balls with either a B, I, N, G, or O on them as well as a number. These letter-number combinations should occasionally coordinate with a square on your card."}
+];
+
+var phys_rule = [
+	"Don't touch the floor", //0
+	"Close your eyes", //1
+	"Change locations occasionally", //2
+	"Add a player role to get a person who's out back in", //3
+	"Add a safe zone", //4
+	"Stealth mode (stay as quiet/sneaky as possible)", //5
+	"Touch someone's shadow to get them out", //6
+	"Change the medium (ex. instead of balls, use water balloons)", //7
+	"Change/use a different verbal cue" //8
+];
+
+var nonphys_rule = [
+	"Add operation to skip turns", //0
+	"Add operation to reverse playing direction", //1
+	"Add some blindfolds", //2
+	"Add a punishment for the loser", //3
+];
+
+var game_num = 0;
+
+function game_func(game, rule, pic){
+	game_num = Math.floor((Math.random() * 24) + 0);
+	document.getElementById(game).innerHTML = games_mappings[game_num].name;
+	document.getElementById(rule).innerHTML = games_mappings[game_num].rules;
+	document.getElementById(pic).src = games_mappings[game_num].image;
+}
+
+function rule_func(id){
+	if (games_mappings[game_num].type.match("phys")){
+		var r1 = Math.floor((Math.random() * 9) + 0);
+		document.getElementById(id).innerHTML = phys_rule[r1];
+	}
+	else{
+		var r1 = Math.floor((Math.random() * 4) + 0);
+		document.getElementById(id).innerHTML = nonphys_rule[r1];
+	}
+}
+</script>
+
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Frankein Games</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;
+  margin:0px;
+  padding:0px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #1abc9c; /* Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #474e5d; /* Dark Blue */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #2f2f2f; /* Black Gray */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+.picture{
+margin: 100px 0px 0px 50px;
+}
+.space{
+text-align: center; 
+font-size: 30px;
+padding: 0px 0px 0px 400px;
+}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">KSMK</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+		<li><a href="homepage1.html">Home</a></li>
+        <li class="active"><a href="gamepage.html">Frankein Games</a></li>
+        <li><a href="cultural2.html">Around the World</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Frankein Games</h3>
+</div>
+
+
+
+<!--This is the pic with the name of the game on top-->
+<div class="picture text-center">
+<button class = "btn-info"id = "game_but" onclick = "game_func('game','rules','pic')">Random Game</button>
+
+<p class ="text-danger" id="game">Game:</p>
+<p><img id="pic" src="#"  alt="Game pictures"></p>
+<span><p class= "text-danger w3-half" style="width:1200px; text-align:left" id="rules">Rules:</p></span>
+</div>
+
+<div class="picture">
+
+
+<p class ="text-info" id="rule1"> </p>
+<button class = "btn-info" id = "rule1_but" onclick = "rule_func('rule1')">Rule 1</button>
+<br></br>
+<p class ="text-info" id="rule2"> </p>
+<button class = "btn-info" id = "rule2_but" onclick = "rule_func('rule2')">Rule 2</button>
+<br></br>
+<p class ="text-info" id="rule3"> </p>
+
+<button class = "btn-info" id = "rule3_but" onclick = "rule_func('rule3')">Rule 3</button>
+ 
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+<p>MSMK - Made for kids, by kids</p>
+</footer>
+
+</body>
+</html>
